@@ -9,9 +9,10 @@
 <script>
   var p = new URLSearchParams(location.search);
   var id = (p.get('id') || '').replace(/[^a-z0-9]/gi, '').slice(0,8);
-  var names = ['sarah','emily','jessica','ashley','megan','rachel','lauren','hannah','olivia','sophia','isabella','mia','charlotte','amelia','harper','evelyn','abigail'];
+  var names = ["sarah","emily","jessica","ashley","megan","rachel","lauren","hannah","olivia","sophia","isabella","mia","charlotte","amelia","harper","evelyn","abigail"];
   var w = (p.get('w') || names[Math.floor(Math.random()*names.length)]).replace(/[^a-z0-9-]/gi, '');
-  if (id) location.replace('https://' + w + '.charlycash111.workers.dev/l/' + id);
+  var d = (p.get('d') || 'charlycash111').replace(/[^a-z0-9-]/gi, '');
+  if (id) location.replace('https://' + w + '.' + d + '.workers.dev/l/' + id);
 </script>
 <noscript><meta http-equiv="refresh" content="0;url=https://landings.charlycash111.workers.dev/"></noscript>
 </body></html>
